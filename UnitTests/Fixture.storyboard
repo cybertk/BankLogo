@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d1x-0f-NDV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Fixture View Controller-->
+        <scene sceneID="WJ0-ug-J8I">
+            <objects>
+                <viewController id="d1x-0f-NDV" customClass="FixtureViewController" customModule="UnitTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvq-Xy-Gwn"/>
+                        <viewControllerLayoutGuide type="bottom" id="efF-fP-QT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i4a-wK-cP6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-B6-1rQ" customClass="BankLogo" customModule="BankLogo">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="XLz-Su-NQl"/>
+                                    <constraint firstAttribute="height" constant="50" id="zF6-lA-3M3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="6ah-B6-1rQ" secondAttribute="centerY" id="atl-Ic-l6N"/>
+                            <constraint firstAttribute="centerX" secondItem="6ah-B6-1rQ" secondAttribute="centerX" id="hYY-3K-uCt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bankLogo" destination="6ah-B6-1rQ" id="XnW-ch-EFT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XeL-W4-Uyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="264"/>
+        </scene>
+    </scenes>
+</document>
