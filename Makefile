@@ -1,16 +1,23 @@
 project = BankLogo
 
-test: test-unit test-archive
+test: test-unit test-carthage test-cocoapods
 
 test-unit:
 	xcodebuild test -scheme $(project) -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build | bundle exec xcpretty
 
-test-archive:
+test-carthage:
 	carthage build --no-skip-current
+
+test-cocoapods:
+	pod spec lint --allow-warnings
 
 bootstrap:
 	bundle install
-	brew install carthage
+	# Cannot brew install carthage on Travis-CI
+	# brew update
+	# brew install carthage
+	curl -OL https://github.com/Carthage/Carthage/releases/download/0.7.5/Carthage.pkg
+	sudo /usr/sbin/installer -pkg Carthage.pkg -target /
 
 release:
 	zip -r -9 $(project).framework.zip Carthage/Build/iOS/*.framework
@@ -26,4 +33,4 @@ carthage-update:
 carthage-build:
 	carthage build --platform ios
 
-.PHONY: all clean test test-unit test-archive release-alpha carthage-update carthage-build bootstrap
+.PHONY: all clean test test-unit test-carthage test-cocoapods carthage-update carthage-build bootstrap
