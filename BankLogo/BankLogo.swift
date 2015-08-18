@@ -72,7 +72,7 @@ public class BankLogo: UIImageView {
 
     // MARK: Initialization
 
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         self.image = imageForBank(nil)
