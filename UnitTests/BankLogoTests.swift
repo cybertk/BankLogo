@@ -9,9 +9,9 @@
 import UIKit
 import XCTest
 
-import BankLogo
+@testable import BankLogo
 
-class UnitTests: XCTestCase {
+class BankLogoTests: XCTestCase {
 
     var logosBundle: NSBundle {
         let path = NSBundle(forClass: BankLogo.self).pathForResource("Logos", ofType: "bundle")

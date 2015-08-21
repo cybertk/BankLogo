@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		926C322E1B5A917C006A42E1 /* BankLogo.h in Headers */ = {isa = PBXBuildFile; fileRef = 926C322D1B5A917C006A42E1 /* BankLogo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		926C324D1B5A9289006A42E1 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C324C1B5A9289006A42E1 /* UnitTests.swift */; };
+		926C324D1B5A9289006A42E1 /* BankLogoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C324C1B5A9289006A42E1 /* BankLogoTests.swift */; };
 		926C324E1B5A9289006A42E1 /* BankLogo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926C32281B5A917C006A42E1 /* BankLogo.framework */; };
 		926C32551B5A92CC006A42E1 /* BankLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C32541B5A92CC006A42E1 /* BankLogo.swift */; };
 		926C325F1B5AB1B5006A42E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C325E1B5AB1B5006A42E1 /* AppDelegate.swift */; };
@@ -21,6 +21,8 @@
 		926C32841B5AB347006A42E1 /* Fixture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C32831B5AB347006A42E1 /* Fixture.storyboard */; };
 		926C32861B5AB468006A42E1 /* FixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C32851B5AB468006A42E1 /* FixtureViewController.swift */; };
 		926C328A1B5C1428006A42E1 /* Logos.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 926C32891B5C1428006A42E1 /* Logos.bundle */; };
+		92A472021B8B01FA00C0E61B /* BankCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A472011B8B01FA00C0E61B /* BankCardTests.swift */; };
+		92B1576B1B85D5820047C263 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1576A1B85D5820047C263 /* BankCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +69,7 @@
 		926C322D1B5A917C006A42E1 /* BankLogo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankLogo.h; sourceTree = "<group>"; };
 		926C32481B5A9289006A42E1 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926C324B1B5A9289006A42E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		926C324C1B5A9289006A42E1 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
+		926C324C1B5A9289006A42E1 /* BankLogoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankLogoTests.swift; sourceTree = "<group>"; };
 		926C32541B5A92CC006A42E1 /* BankLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankLogo.swift; sourceTree = "<group>"; };
 		926C325A1B5AB1B5006A42E1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926C325D1B5AB1B5006A42E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		926C32831B5AB347006A42E1 /* Fixture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fixture.storyboard; sourceTree = "<group>"; };
 		926C32851B5AB468006A42E1 /* FixtureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureViewController.swift; sourceTree = "<group>"; };
 		926C32891B5C1428006A42E1 /* Logos.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Logos.bundle; sourceTree = "<group>"; };
+		92A472011B8B01FA00C0E61B /* BankCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardTests.swift; sourceTree = "<group>"; };
+		92B1576A1B85D5820047C263 /* BankCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 				926C322D1B5A917C006A42E1 /* BankLogo.h */,
 				926C32541B5A92CC006A42E1 /* BankLogo.swift */,
 				926C322C1B5A917C006A42E1 /* Info.plist */,
+				92B1576A1B85D5820047C263 /* BankCard.swift */,
 			);
 			path = BankLogo;
 			sourceTree = "<group>";
@@ -142,7 +147,8 @@
 		926C32491B5A9289006A42E1 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				926C324C1B5A9289006A42E1 /* UnitTests.swift */,
+				926C324C1B5A9289006A42E1 /* BankLogoTests.swift */,
+				92A472011B8B01FA00C0E61B /* BankCardTests.swift */,
 				926C324B1B5A9289006A42E1 /* Info.plist */,
 				926C32831B5AB347006A42E1 /* Fixture.storyboard */,
 				926C32851B5AB468006A42E1 /* FixtureViewController.swift */,
@@ -310,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B1576B1B85D5820047C263 /* BankCard.swift in Sources */,
 				926C32551B5A92CC006A42E1 /* BankLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				926C32861B5AB468006A42E1 /* FixtureViewController.swift in Sources */,
-				926C324D1B5A9289006A42E1 /* UnitTests.swift in Sources */,
+				92A472021B8B01FA00C0E61B /* BankCardTests.swift in Sources */,
+				926C324D1B5A9289006A42E1 /* BankLogoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
