@@ -48,7 +48,24 @@ class BankLogoTests: XCTestCase {
     }
 
     // MARK: Test Cases
-    
+
+    func testBankInitWithString() {
+        var bank: Bank? = nil
+
+        // When init with nil
+        bank = Bank(nil)
+        XCTAssertTrue(bank == nil)
+
+        // When init with CCB
+        bank = Bank("CCB")
+        XCTAssertTrue(bank != nil)
+        XCTAssertTrue(bank! == Bank.CCB)
+
+        // When init with invalid bank
+        bank = Bank("invalid")
+        XCTAssertTrue(bank == nil)
+    }
+
     func testConstructWithCode() {
 
         // Given a default BankLogo
