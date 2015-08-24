@@ -58,6 +58,17 @@ public enum Bank: String {
     case WHCCB = "WHCCB"
     case WZCB = "WZCB"
     case YDRCB = "YDRCB"
+
+
+    // MARK: Initilizers
+
+    public init?(_ string: String?) {
+        guard let string = string else {
+            return nil
+        }
+
+        self.init(rawValue: string)
+    }
 }
 
 public class BankLogo: UIImageView {

@@ -9,9 +9,9 @@
 import UIKit
 import XCTest
 
-import BankLogo
+@testable import BankLogo
 
-class UnitTests: XCTestCase {
+class BankLogoTests: XCTestCase {
 
     var logosBundle: NSBundle {
         let path = NSBundle(forClass: BankLogo.self).pathForResource("Logos", ofType: "bundle")
@@ -48,7 +48,24 @@ class UnitTests: XCTestCase {
     }
 
     // MARK: Test Cases
-    
+
+    func testBankInitWithString() {
+        var bank: Bank? = nil
+
+        // When init with nil
+        bank = Bank(nil)
+        XCTAssertTrue(bank == nil)
+
+        // When init with CCB
+        bank = Bank("CCB")
+        XCTAssertTrue(bank != nil)
+        XCTAssertTrue(bank! == Bank.CCB)
+
+        // When init with invalid bank
+        bank = Bank("invalid")
+        XCTAssertTrue(bank == nil)
+    }
+
     func testConstructWithCode() {
 
         // Given a default BankLogo
