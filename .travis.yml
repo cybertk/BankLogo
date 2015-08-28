@@ -3,6 +3,7 @@ os: osx
 osx_image: xcode7
 install:
 - make bootstrap
+- osascript -e 'activate application "Simulator"'
 before_script:
 - script/cert --import
 script:
