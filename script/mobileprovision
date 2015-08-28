@@ -14,10 +14,16 @@ import_provisions ()
         return 1
     fi
 
+    # Enforce system provisioning dir existence, it does not exist sometimes. See https://travis-ci.org/cybertk/BankLogo/builds/72412378#L142
+    local provision_dir="$HOME/Library/MobileDevice/Provisioning Profiles/"
+    mkdir "$provision_dir" >/dev/null 2>&1
+
     local p
     for p in $SCRIPT_DIR/provisions/*.mobileprovision;
     do
-        cp "$p" "$HOME/Library/MobileDevice/Provisioning Profiles/"
+        [ "$p" = "$SCRIPT_DIR/provisions/*.mobileprovision" ] && break
+
+        cp "$p" "$provision_dir"
         echo "${p##*/} imported"
     done
 }
@@ -39,6 +45,8 @@ delete_provisions ()
     local p
     for p in $SCRIPT_DIR/provisions/*.mobileprovision;
     do
+        [ "$p" = "$SCRIPT_DIR/provisions/*.mobileprovision" ] && break
+
         rm "$HOME/Library/MobileDevice/Provisioning Profiles/${p##*/}"
     done
 }

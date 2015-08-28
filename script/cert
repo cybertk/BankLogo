@@ -36,7 +36,7 @@ import_certs ()
     # Import certificates.
     for c in $SCRIPT_DIR/certificates/*.p12;
     do
-        rm "$HOME/Library/MobileDevice/Provisioning Profiles/${p##*/}"
+        [ "$c" = "$SCRIPT_DIR/certificates/*.p12" ] && break
         security import "$c" -k "$KEYCHAIN" -P "$KEY_PASSWORD" -T /usr/bin/codesign
     done
 }
