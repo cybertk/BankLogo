@@ -1,4 +1,6 @@
 language: objective-c
+os: osx
+osx_image: xcode7
 install:
 - make bootstrap
 before_script:
