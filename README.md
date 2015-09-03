@@ -24,6 +24,29 @@ it, simply add the following line to your Podfile:
 pod "BankLogo"
 ```
 
+## Getting Started
+
+### Storyboard and Xib
+
+Just add a **UIView** and set its Class to **BankLogo**, See [storyboard-example](Example/).
+
+Then update Bank's Logo with `view.bank = Bank.CMB`
+
+### Code
+
+```swift
+import BankLogo
+
+func viewDidLoad() {
+    let logo = BankLogo(frame: CGRectZero)
+    logo.bank = Bank.ABC
+
+    view.addSubView(logo)
+}
+```
+
+See [Example](Example/)
+
 ## Banks Supported
 
 | Bank | Icon | Name |
